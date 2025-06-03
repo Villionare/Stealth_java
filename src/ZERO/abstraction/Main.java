@@ -25,16 +25,15 @@ public class Main implements Interfaces, Interface3, Interface2 {
         //using interfaces
         //so we will be creating a abstract class for user info and mandatory fealds
 
-        AbstractClass obj1 = new AbstractClass();
-        obj1.unnessory2();
-        obj1.fun();
-        obj1.fun1();
-        obj1.unnessory2();
+        Temp oo = new Temp();
+
 
         Main obj = new Main();
 
         obj.inter();
         obj.inter2();
         obj.inter3();
+        oo.fun();
+        oo.runfun();
     }
 }
