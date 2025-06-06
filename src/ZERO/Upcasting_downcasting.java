@@ -19,7 +19,11 @@ public class Upcasting_downcasting {
 
     public static void main(String[] args) {
 
+        //upcasting refers to a sub class refrence is treated with super class reference (implicit conversion)
         E a = new F();
         a.aa();
+
+        //down casting refers to converting a super class reference back to child reference
+
     }
 }
