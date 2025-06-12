@@ -1,25 +1,19 @@
 package ZERO;
 
-class Ab {
-    String s = "this is a string";
-    void fun(){
-        System.out.println("this is a class");
-    }
-}
-
-class Bc extends Ab{
-    @Override
-    void fun(){
-        System.out.println("this is a function from sub class");
-    }
-}
-
-
 public class temp {
-    public static void main(String[] args) {
-        Ab a = new Bc();
-        a.fun();
 
-        //this is upcasting
+    public static void main(String[] args) {
+        String customerName = "Abhay";
+        String customerType = "Regular";
+        String orderedFood = "Pizza";
+        int foodQty = 2;
+        int discount = 5/100;
+        int deliveryCharge = 5/100;
+        int totalCost = 0;
+
+        if (customerName.equals("Abhay") && orderedFood.equals("Pizza")){
+            System.out.println("so your ordered item is Pizza");
+//            totalCost =
+        }
     }
 }
