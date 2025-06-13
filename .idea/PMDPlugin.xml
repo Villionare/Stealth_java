@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PMDPlugin">
+    <option name="inEditorAnnotationRules">
+      <list>
+        <option value="category/kotlin/bestpractices.xml" />
+      </list>
+    </option>
+    <option name="optionKeyToValue">
+      <map>
+        <entry key="Statistics URL" value="" />
+        <entry key="Target JDK" value="24-preview" />
+        <entry key="Target Kotlin version" value="1.8" />
+        <entry key="Threads" value="4" />
+      </map>
+    </option>
+    <option name="skipTestSources" value="false" />
+  </component>
+</project>

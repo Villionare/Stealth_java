@@ -1,22 +1,23 @@
 package ZERO;
 
 public class temp {
-    class temp {
-        //Implement your code here
-        private int movieId;
-        private int noOfSeats;
-        private double costPerTicket;
+    public static int findHighestOccurrence(String str) {
+        int[] frequency = new int[256]; // Assuming ASCII characters
+
+        int maxCount = 0;
+
+        // Count frequency of each character
+        for (char ch : str.toCharArray()) {
+            frequency[ch]++;
+            maxCount = Math.max(maxCount, frequency[ch]);
+        }
+
+        return maxCount; // Return the highest occurrence count
     }
 
-
-    class Tester {
-        public static void main(String[] args) {
-            temp movieTicket = new temp(112, 3);
-            double amount = movieTicket.calculateTotalAmount();
-            if (amount==0)
-                System.out.println("Sorry! Please enter valid movie Id and number of seats");
-            else
-                System.out.println("Total amount for booking : $" + amount);
-        }
+    public static void main(String[] args) {
+        String str = "success";
+        System.out.println("Highest occurrence count: " + findHighestOccurrence(str));
+        // Output: Highest occurrence count: 5
     }
 }

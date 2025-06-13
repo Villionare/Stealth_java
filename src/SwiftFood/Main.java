@@ -7,5 +7,10 @@ public class Main {
         Order order1 = new Order(234, "Coka cola", 345.45, "pending");
         customer1.getCustomerDetails();
         order1.showOrderDetails();
+
+        long[] contacts = {436756756,343464754,344534534};
+        Restaurant first = new Restaurant("dhaba style", contacts, "delhi", 4.6f);
+
+        first.displayRestaurantDetails();
     }
 }

@@ -28,7 +28,7 @@ public class Main {
         TodaysNewspapaer news1 = new TodaysNewspapaer("xxx", LocalDate.now().toString(), "Express Hindustan", 10);
 
         System.out.println("Welcome to the Library!");
-        while(status != false){
+        while(status){
         System.out.println("Please Choose any option below:\n1 - Show Books\n2 - Show Magazines\n3 - Show Newspapers\n4 - Issue a Book\n5 - Return a Book\n6 - Read a magazine\n7 - Read Today Newspaper\n8 - Exit");
         int option = scanner.nextInt();
 
@@ -56,7 +56,7 @@ public class Main {
                     System.out.println("Books Issued Successfully");
                 } else {
                     System.out.println("Wrong ID");
-                };
+                }
             }
             case 5 -> {
                 System.out.println("Enter the book id:");
