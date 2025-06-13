@@ -1,23 +1,25 @@
 package ZERO;
 
-public class temp {
-    public static int findHighestOccurrence(String str) {
-        int[] frequency = new int[256]; // Assuming ASCII characters
-
-        int maxCount = 0;
-
-        // Count frequency of each character
-        for (char ch : str.toCharArray()) {
-            frequency[ch]++;
-            maxCount = Math.max(maxCount, frequency[ch]);
-        }
-
-        return maxCount; // Return the highest occurrence count
+class Ab {
+    String s = "this is a string";
+    void fun(){
+        System.out.println("this is a class");
     }
+}
 
+class Bc extends Ab{
+    @Override
+    void fun(){
+        System.out.println("this is a function from sub class");
+    }
+}
+
+
+public class temp {
     public static void main(String[] args) {
-        String str = "success";
-        System.out.println("Highest occurrence count: " + findHighestOccurrence(str));
-        // Output: Highest occurrence count: 5
+        Ab a = new Bc();
+        a.fun();
+
+        //this is upcasting
     }
 }

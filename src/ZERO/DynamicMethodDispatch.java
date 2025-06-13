@@ -6,7 +6,7 @@ package ZERO;
 class A{
  void ff(){
         System.out.println("this is a helper class");
- }
+  }
 }
 
 class B extends A {
@@ -27,25 +27,28 @@ class D extends A{
     }
 }
 
-public class DynamicMethodDispatch {
 
+//upcasting and down casting && Dynamic Method Dispatch
+
+class first{
+    void fun(){
+        System.out.println("this is a parent fun.");
+    }
+}
+
+class second extends first{
+    @Override
+    void fun(){
+        System.out.println("this is overridden now");
+    }
+}
+
+public class DynamicMethodDispatch{
     public static void main(String[] args) {
+        first a = new second(); //this is upcasting and it is implicit
+        a.fun(); //this is dynamic method dispatch, as the overridden method gets called
 
-        A a = new A();
-        //A = class name
-        //a = reference variable
-        //new A() = object creation
-        a.ff();
-
-        //IRRESPECTIVE OF WHAT CLASS TYPE YOU HAVE ALL THAT MATTERS IS THE WHAT TYPE OF OBJECT IS CREATED
-        A b = new B();//the type of the variable dosent matter e.g. A but matter the object creation B(), so this will call class B fun.
-        b.ff();
-
-        A c = new C();
-        c.ff();
-
-        A d = new D();
-        d.ff();
-
+        second b = (second) a; //this is down-casting and this is explicit conversion
+        b.fun();
     }
 }
