@@ -1,19 +1,22 @@
 package ZERO;
 
 public class temp {
+    class temp {
+        //Implement your code here
+        private int movieId;
+        private int noOfSeats;
+        private double costPerTicket;
+    }
 
-    public static void main(String[] args) {
-        String customerName = "Abhay";
-        String customerType = "Regular";
-        String orderedFood = "Pizza";
-        int foodQty = 2;
-        int discount = 5/100;
-        int deliveryCharge = 5/100;
-        int totalCost = 0;
 
-        if (customerName.equals("Abhay") && orderedFood.equals("Pizza")){
-            System.out.println("so your ordered item is Pizza");
-//            totalCost =
+    class Tester {
+        public static void main(String[] args) {
+            temp movieTicket = new temp(112, 3);
+            double amount = movieTicket.calculateTotalAmount();
+            if (amount==0)
+                System.out.println("Sorry! Please enter valid movie Id and number of seats");
+            else
+                System.out.println("Total amount for booking : $" + amount);
         }
     }
 }

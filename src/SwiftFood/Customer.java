@@ -2,10 +2,18 @@ package SwiftFood;
 
 public class Customer {
     private String id;
+    private String customerType;
     private String name;
     private long contactNumber;
     private String address;
-    private double Bill;
+
+    public Customer(String id, String customerType, String name, long contactNumber, String address) {
+        this.id = id;
+        this.customerType = customerType;
+        this.name = name;
+        this.contactNumber = contactNumber;
+        this.address = address;
+    }
 
     public Customer(String id, String name, long contactNumber, String address) {
         this.id = id;
@@ -14,35 +22,26 @@ public class Customer {
         this.address = address;
     }
 
-    public String getId() {
-        return id;
+    void getCustomerDetails(){
+        System.out.println("customer Details:");
+        System.out.println("ID: " + this.id);
+        System.out.println("name: " + this.name);
+        System.out.println("Contact Number: " + this.contactNumber);
+        System.out.println("Customer Type: " + this.customerType);
+        System.out.println("Address: " + this.address);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public long getContactNumber() {
-        return contactNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setId(String id) {
+    void updateCustomersDetails(String id, String name, long contactNumber, String address){
         this.id = id;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public void setContactNumber(long contactNumber) {
         this.contactNumber = contactNumber;
+        this.address = address;
+
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    void payBills(double totalPrice, double discount){
+        System.out.println("Calculating the final amount to be paid...");
+        int final_amount = (int) (totalPrice - totalPrice * (discount/100));
+        System.out.printf("Hey %s your final amount to be paid is: %f",this.name, final_amount);
     }
 }
