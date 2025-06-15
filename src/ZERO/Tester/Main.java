@@ -1,32 +1,18 @@
 package ZERO.Tester;
 
-class Main {
-    public static void main(String[] args) {
-        UndergraduateStudent undergraduateStudent = new UndergraduateStudent("Philip");
-        undergraduateStudent.setTestScore(0, 70);
-        undergraduateStudent.setTestScore(1, 69);
-        undergraduateStudent.setTestScore(2, 71);
-        undergraduateStudent.setTestScore(3, 55);
+class Main{
+    public static void main(String args[]) {
+        System.out.println("Purchase Details\n***************");
+        PurchaseDetails purchaseDetails = new PurchaseDetails("P1001","Credit Card");
+        System.out.println("Total purchase amount: " + Math.round(purchaseDetails.calculateTax(100)*100)/100.0);
+        System.out.println("Tax percentage: "+purchaseDetails.getTaxPercentage());
 
-        undergraduateStudent.generateResult();
+        System.out.println("Seller Details\n***************");
+        Seller seller = new Seller("Canada");
+        System.out.println("Tax to be paid by the seller: " + Math.round(seller.calculateTax(100)*100)/100.0);
+        System.out.println("Tax percentage: "+seller.getTaxPercentage());
 
-        System.out.println("Student name: " + undergraduateStudent.getStudentName());
-        System.out.println("Result: " + undergraduateStudent.getTestResult());
-
-        System.out.println();
-
-        GraduateStudent graduateStudent = new GraduateStudent("Jerry");
-        graduateStudent.setTestScore(0, 70);
-        graduateStudent.setTestScore(1, 69);
-        graduateStudent.setTestScore(2, 71);
-        graduateStudent.setTestScore(3, 55);
-
-        graduateStudent.generateResult();
-
-        System.out.println("Student name: " + graduateStudent.getStudentName());
-        System.out.println("Result: " + graduateStudent.getTestResult());
-
-        // You can add more test cases here!
+        //Create more objects for testing your code
     }
 }
 
