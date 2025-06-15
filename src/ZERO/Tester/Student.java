@@ -1,37 +1,43 @@
 package ZERO.Tester;
 
-public class Student {
-    protected String studentName;
-    protected int[] testScores;
-    protected String testResult;
+abstract class Student {
+    private String studentName;
+    private int[] testScores = new int[4];
+    private String testResult;
 
-    public String gettestResult() {
-        return testResult;
+    public Student(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getStudentName() {
         return studentName;
     }
 
-    public int[] getTestScores() {
-        return testScores;
+    public void setTestScore(int testNumber, int testScore) {
+        if (testNumber >= 0 && testNumber < 4) {
+            testScores[testNumber] = testScore;
+        }
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public int getTestScore(int testNumber) {
+        return testScores[testNumber];
     }
 
-    public void setTestScores(int[] testScores) {
-        this.testScores = testScores;
+    public String getTestResult() {
+        return testResult;
     }
 
-    public void setTestResult(String testResult) {
-        this.testResult = testResult;
+    protected void setTestResult(String result) {
+        this.testResult = result;
     }
 
-    public Student(String studentName) {
-        this.studentName = studentName;
+    protected int getAverageScore() {
+        int sum = 0;
+        for (int score : testScores) {
+            sum += score;
+        }
+        return sum / testScores.length;
     }
 
-    void generateResult(){}
+    public abstract void generateResult();
 }
