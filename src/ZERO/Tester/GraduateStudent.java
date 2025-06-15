@@ -1,6 +1,6 @@
 package ZERO.Tester;
 
-class User {
+class GraduateStudent {
 
     //user
     private int id;
@@ -8,7 +8,7 @@ class User {
     private String userName;
     protected double walletBalance;
 
-    public User(int id, String emailId, String userName, double walletBalance) {
+    public GraduateStudent(int id, String emailId, String userName, double walletBalance) {
         this.id = id;
         this.emailId = emailId;
         this.userName = userName;
