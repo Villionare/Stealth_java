@@ -47,7 +47,6 @@ public class E1 {
                     // value
                     throw new NegativeMarksException("User Defined: Marks must not be negative!");
                 }
-
                 ++totalSubjects;
                 sum += marks[i];
             }
