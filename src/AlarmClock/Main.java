@@ -1,5 +1,7 @@
 package AlarmClock;
 
+import java.time.format.DateTimeFormatter;
+import java.time.*;
 import java.util.Scanner;
 
 class thread implements Runnable {
@@ -25,6 +27,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
         System.out.println("This is a alarm clock");
         System.out.println("type the time to get started.");
         int start = scanner.nextInt();
