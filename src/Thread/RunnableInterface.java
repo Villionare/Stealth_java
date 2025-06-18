@@ -3,13 +3,18 @@ package Thread;
 public class RunnableInterface implements Runnable {
     @Override
     public void run(){
-        String str = "this is a thread running using run method created by Runnable Interface";
-        System.out.println(str);
-    }
+    for(int i = 0; i<=5; i++){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
-    public static void main(String[] args) {
-        RunnableInterface r1 = new RunnableInterface();
-        Thread t2 = new Thread(r1);
-        t2.start();
+        if(i == 5){
+            System.out.println("Times up!");
+            System.exit(0);
+            //Program will exit with the status code 0
+        }
+    }
     }
 }
