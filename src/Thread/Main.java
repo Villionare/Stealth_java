@@ -18,5 +18,6 @@ public class Main {
         System.out.println("Hello " + name);
 
         scanner.close();
+        //t1.join() - this will make the main thread 'main' wait till t1 gets executed
     }
 }
