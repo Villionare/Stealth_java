@@ -1,9 +1,9 @@
 package Thread;
 
-public class RunnableInterface implements Runnable {
-    @Override
-    public void run(){
-    for(int i = 0; i<=5; i++){
+public class RunnableInterface {
+    Runnable thread0 = () -> {
+
+        for(int i = 0; i<=5; i++){
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -14,7 +14,7 @@ public class RunnableInterface implements Runnable {
             System.out.println("Times up!");
             System.exit(0);
             //Program will exit with the status code 0
-        }
-    }
-    }
+        }};
+
+    };
 }

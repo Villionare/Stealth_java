@@ -7,8 +7,25 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        RunnableInterface runnableThread = new RunnableInterface();
-        Thread t1 = new Thread(runnableThread);
+
+        Runnable thread0 = () -> {
+
+            for (int i = 0; i <= 5; i++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+
+                if (i == 5) {
+                    System.out.println("Times up!");
+                    System.exit(0);
+                    //Program will exit with the status code 0
+                }
+            }
+        };
+
+        Thread t1 = new Thread(thread0);
         t1.setDaemon(true); //thread will be destroyed when the main thread will be over
         t1.start();
 
