@@ -9,7 +9,7 @@ public class FibonacciSeries {
         System.out.println("Enter how many fibonacci numbers to print:");
         int inp = scanner.nextInt();
         int no = 0;
-        int[] No =new int[inp];
+        int[] No = new int[inp];
 
         for (int i = 0; i < inp; i++){
             if(i==0){

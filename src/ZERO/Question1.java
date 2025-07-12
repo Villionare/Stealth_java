@@ -1,7 +1,5 @@
 package ZERO;
 
-import ZERO.abstraction.Main;
-
 import java.util.Random;
 
 public class Question1 {
