@@ -8,6 +8,7 @@ public class ArmstrongNumbers {
         int sum = 0;
 
         while (num!=0){
+//            important! = if q<p then q%p == q;
             remainder = num%10; //so this modulus doesn't care about the decimal quotient and
                                 //it only cares about the remainder after the devision.
                                 //when we devide 5%10 so the % just considers 0 instead 0.5
