@@ -19,7 +19,6 @@ public class ArmstrongNumbers {
             process /= 10;
         }
 
-
         if (temp == no ){
             System.out.println("Yes, " + no + " this is a armstrong number");
         } else {

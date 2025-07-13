@@ -6,6 +6,7 @@ public class PassByReference {
         temp1.name = "kutty";
         temp1.age = 22;
 
+
         //in this case the memory address has been passed to the new Reference Variable
         Temp temp2 = temp1;
 
@@ -13,10 +14,10 @@ public class PassByReference {
 //         temp1 ----------\
 //                          \
 //                          new temp();
-//                         /
-//        temp2 ----------/
+//                          /
+//         temp2 ----------/
 
-        
+
         System.out.println(temp1);
 
         temp2.name = "Ranga";
